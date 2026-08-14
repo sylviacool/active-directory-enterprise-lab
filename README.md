@@ -162,6 +162,12 @@ Standard password administration tasks were performed and verified using both th
 
 ## Key Takeaways
 
-- Real infrastructure troubleshooting rarely fails at the step you expect. The wallpaper GPO, for example, required investigation of file paths, file format, GPO linking, and Security Filtering. The wallpaper was successfully demonstrated on the Windows 11 client for a domain user, while the group-based targeting behavior was left for further investigation.
-- Group Policy scope (where a GPO is *linked*) and Group Policy targeting (*Security Filtering*) are separate mechanisms. Understanding the difference is essential when the intended target audience does not map cleanly to a single OU.
-- Verifying that a fix actually worked — rather than assuming it did — matters as much as the fix itself. Several issues in this project, including the unsaved PowerShell script, the DHCP subnet mask, and the Account Lockout Policy's Computer vs. User Configuration scope, were identified by checking the actual result after making changes.
+- Built and configured a Windows Server 2022 Active Directory environment including AD DS, DNS, DHCP, OUs, domain users, security groups, file sharing, and Group Policy.
+
+- Practiced troubleshooting across multiple layers, including network configuration, DHCP scope settings, GPO paths, file formats, policy linking, and Security Filtering.
+
+- Learned the distinction between GPO linking and Security Filtering, and how policy scope affects which users and computers receive a policy.
+
+- Used `gpresult /r`, `ipconfig`, Active Directory tools, and PowerShell to verify configurations and troubleshoot issues rather than relying only on the initial configuration.
+
+- Automated Active Directory user creation with a parameterized PowerShell script and performed common password-management tasks using both GUI and PowerShell.
